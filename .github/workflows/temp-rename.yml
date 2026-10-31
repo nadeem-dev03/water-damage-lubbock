@@ -1,0 +1,22 @@
+name: Rename uploaded file to index.html
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename water-damage-lubbock.html to index.html
+        run: |
+          git config user.name "nadeem-dev03"
+          git config user.email "nadeem-dev03@users.noreply.github.com"
+          rm -f index.html
+          mv water-damage-lubbock.html index.html
+          git add -A
+          git commit -m "Rename water-damage-lubbock.html to index.html (redesign)"
+          git push
