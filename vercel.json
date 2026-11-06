@@ -1,0 +1,94 @@
+{
+  "redirects": [
+    {
+      "source": "/areas/petersburg/",
+      "destination": "/areas/hale-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/petersburg",
+      "destination": "/areas/hale-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/anton/",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/anton",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/sundown/",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/sundown",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/ropesville/",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/ropesville",
+      "destination": "/areas/hockley-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/ralls/",
+      "destination": "/areas/crosby-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/ralls",
+      "destination": "/areas/crosby-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/o-donnell/",
+      "destination": "/areas/lynn-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/o-donnell",
+      "destination": "/areas/lynn-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/meadow/",
+      "destination": "/areas/terry-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/meadow",
+      "destination": "/areas/terry-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wellman/",
+      "destination": "/areas/terry-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/wellman",
+      "destination": "/areas/terry-county/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/hurlwood/",
+      "destination": "/areas/reese-center/",
+      "permanent": true
+    },
+    {
+      "source": "/areas/hurlwood",
+      "destination": "/areas/reese-center/",
+      "permanent": true
+    }
+  ]
+}
