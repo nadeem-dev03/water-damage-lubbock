@@ -221,6 +221,7 @@ nav.main{display:none!important}
 /* Hero */
 .hero{position:relative;min-height:58svh;display:flex;align-items:flex-end;padding:0;overflow:hidden;background:#12304A}
 .hero video.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1}
+@media(max-width:720px){.hero video.bg{object-fit:cover}} /* mobile: no video source matches, the poster (hero.webp) shows as a static banner */
 .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,48,74,.55) 0%,rgba(18,48,74,.25) 42%,rgba(18,48,74,.85) 100%)}
 .hero-in{position:relative;z-index:2;width:100%;padding:64px 20px 52px;color:#fff}
 .hero h1{font-size:clamp(42px,6vw,68px);line-height:1.08;letter-spacing:-.5px;max-width:820px;color:#fff}
@@ -465,7 +466,7 @@ footer.site a:hover{color:#67D7E0}
 <header class="site">
   <div class="header-in">
     <a class="logo-clean" href="#top" aria-label="Water Damage Lubbock — home">
-      <img class="logo-for-light" src="assets/logo-oneline.png" alt="Water Damage Lubbock logo">
+      <picture><source srcset="assets/logo-oneline.webp" type="image/webp"><img class="logo-for-light" src="assets/logo-oneline.png" alt="Water Damage Lubbock logo" width="600" height="183"></picture>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#services">Services</a>
@@ -498,8 +499,8 @@ footer.site a:hover{color:#67D7E0}
 
 <!-- HERO -->
 <section class="hero" aria-label="Water damage restoration in Lubbock, Texas">
-  <video class="bg" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero.jpg" aria-hidden="true">
-    <source src="assets/video-hero.mp4" type="video/mp4">
+  <video class="bg" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/hero.webp" aria-hidden="true">
+    <source src="assets/video-hero.mp4" type="video/mp4" media="(min-width: 721px)">
   </video>
   <div class="shade"></div>
   <div class="wrap hero-in">
@@ -534,7 +535,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="sec-head">
       <span class="tag">Missed Calls</span>
-      <div class="sec-img"><img src="assets/tech-inspect.jpg" alt="Technician inspecting water damage after a missed call in Lubbock" loading="lazy"></div>
+      <div class="sec-img"><picture><source srcset="assets/tech-inspect.webp" type="image/webp"><img src="assets/tech-inspect.jpg" alt="Technician inspecting water damage after a missed call in Lubbock" loading="lazy" width="1200" height="670"></picture></div>
       <h2>If We Miss Your Call, Text Us</h2>
       <p>Water emergencies rarely happen one at a time. If a storm rolls over the South Plains and every line is busy, call or text — here is what to do.</p>
     </div>
@@ -561,14 +562,14 @@ footer.site a:hover{color:#67D7E0}
       <p>Eight services, one goal: get the water out, get the structure dry, and hand your home back clean. Every service has its own full page below — what it covers, the signs you need it, and how a visit works.</p>
     </div>
     <div class="grid grid-4">
-      <article class="card"><div class="thumb"><img src="assets/hero.jpg" alt="Technician extracting standing water from a Lubbock home" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">💧</span><h3>Emergency Water Removal</h3><p>Truck-mounted and portable extraction pulls standing water out of floors, carpets and crawl spaces — fast.</p><a class="pill-link" href="/services/water-removal/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/drying.jpg" alt="Air movers and a dehumidifier drying a water damaged room in Lubbock" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">💨</span><h3>Structural Drying</h3><p>Air movers, dehumidifiers and daily moisture readings dry walls, floors and framing to standard.</p><a class="pill-link" href="/services/structural-drying/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flood-home.jpg" alt="Flooded Lubbock home interior during flood cleanup" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">🌊</span><h3>Flood Damage Cleanup</h3><p>Storm and rising-water cleanup: extraction, debris, cleaning, sanitizing and full structural drying.</p><a class="pill-link" href="/services/flood-cleanup/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flooded-room.jpg" alt="Contaminated water standing in a hallway during sewage cleanup in Lubbock" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">⚠️</span><h3>Sewage Backup Cleanup</h3><p>Contaminated water handled safely: extraction, disposal, disinfecting and drying before reuse.</p><a class="pill-link" href="/services/sewage-cleanup/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/pipe-repair.jpg" alt="Water soaked floor under cabinets after a burst pipe in a Lubbock home" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">🔧</span><h3>Burst Pipe Cleanup</h3><p>Frozen and burst supply lines flood fast. We extract, open wet cavities and dry the whole path of the water.</p><a class="pill-link" href="/services/burst-pipe/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/ceiling.jpg" alt="Drying equipment under a water stained ceiling from a roof leak in Lubbock" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">🏠</span><h3>Roof Leak &amp; Storm Damage</h3><p>Wind-driven rain and roof leaks soak ceilings and attics. We dry cavities you cannot see into.</p><a class="pill-link" href="/services/roof-leak/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/basement.jpg" alt="Standing water across a floor after a basement and crawl space water loss in Lubbock" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">🏡</span><h3>Basement &amp; Crawl Space</h3><p>Pumping, extraction and drying for the lowest, slowest-drying parts of South Plains homes.</p><a class="pill-link" href="/services/basement/">Full page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/tech-inspect.jpg" alt="Technician inspecting a wall for moisture and mold risk after water damage in Lubbock" loading="lazy"></div><div class="body"><span class="card-icon" aria-hidden="true">📞</span><h3>24/7 Emergency Service</h3><p>No-cooling moments have nothing on a flooding kitchen at 2 a.m. One number, answered around the clock.</p><a class="pill-link" href="/services/emergency/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/hero.webp" type="image/webp"><img src="assets/hero.jpg" alt="Technician extracting standing water from a Lubbock home" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">💧</span><h3>Emergency Water Removal</h3><p>Truck-mounted and portable extraction pulls standing water out of floors, carpets and crawl spaces — fast.</p><a class="pill-link" href="/services/water-removal/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/drying.webp" type="image/webp"><img src="assets/drying.jpg" alt="Air movers and a dehumidifier drying a water damaged room in Lubbock" loading="lazy" width="1024" height="576"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">💨</span><h3>Structural Drying</h3><p>Air movers, dehumidifiers and daily moisture readings dry walls, floors and framing to standard.</p><a class="pill-link" href="/services/structural-drying/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flood-home.webp" type="image/webp"><img src="assets/flood-home.jpg" alt="Flooded Lubbock home interior during flood cleanup" loading="lazy" width="1600" height="1244"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">🌊</span><h3>Flood Damage Cleanup</h3><p>Storm and rising-water cleanup: extraction, debris, cleaning, sanitizing and full structural drying.</p><a class="pill-link" href="/services/flood-cleanup/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flooded-room.webp" type="image/webp"><img src="assets/flooded-room.jpg" alt="Contaminated water standing in a hallway during sewage cleanup in Lubbock" loading="lazy" width="1280" height="720"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">⚠️</span><h3>Sewage Backup Cleanup</h3><p>Contaminated water handled safely: extraction, disposal, disinfecting and drying before reuse.</p><a class="pill-link" href="/services/sewage-cleanup/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/pipe-repair.webp" type="image/webp"><img src="assets/pipe-repair.jpg" alt="Water soaked floor under cabinets after a burst pipe in a Lubbock home" loading="lazy" width="1435" height="801"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">🔧</span><h3>Burst Pipe Cleanup</h3><p>Frozen and burst supply lines flood fast. We extract, open wet cavities and dry the whole path of the water.</p><a class="pill-link" href="/services/burst-pipe/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/ceiling.webp" type="image/webp"><img src="assets/ceiling.jpg" alt="Drying equipment under a water stained ceiling from a roof leak in Lubbock" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">🏠</span><h3>Roof Leak &amp; Storm Damage</h3><p>Wind-driven rain and roof leaks soak ceilings and attics. We dry cavities you cannot see into.</p><a class="pill-link" href="/services/roof-leak/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/basement.webp" type="image/webp"><img src="assets/basement.jpg" alt="Standing water across a floor after a basement and crawl space water loss in Lubbock" loading="lazy" width="1000" height="1000"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">🏡</span><h3>Basement &amp; Crawl Space</h3><p>Pumping, extraction and drying for the lowest, slowest-drying parts of South Plains homes.</p><a class="pill-link" href="/services/basement/">Full page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/tech-inspect.webp" type="image/webp"><img src="assets/tech-inspect.jpg" alt="Technician inspecting a wall for moisture and mold risk after water damage in Lubbock" loading="lazy" width="1200" height="670"></picture></div><div class="body"><span class="card-icon" aria-hidden="true">📞</span><h3>24/7 Emergency Service</h3><p>No-cooling moments have nothing on a flooding kitchen at 2 a.m. One number, answered around the clock.</p><a class="pill-link" href="/services/emergency/">Full page →</a></div></article>
     </div>
   </div>
 </section>
@@ -622,7 +623,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="sec-head">
       <span class="tag">How It Works</span>
-      <div class="sec-img"><img src="assets/drying-wall.jpg" alt="Drying equipment drying a wall after water damage in Lubbock" loading="lazy"></div>
+      <div class="sec-img"><picture><source srcset="assets/drying-wall.webp" type="image/webp"><img src="assets/drying-wall.jpg" alt="Drying equipment drying a wall after water damage in Lubbock" loading="lazy" width="1000" height="667"></picture></div>
       <h2>From First Call to Final Moisture Reading</h2>
       <p>Water damage across the South Plains follows a pattern — playa lake storms, hard freezes, aging supply lines — and so does our response: find all of the water, not just the water you can see, then dry it to measured standard.</p>
     </div>
@@ -644,12 +645,12 @@ footer.site a:hover{color:#67D7E0}
       <p>Flooded floors, drying setups and inspections from real South Plains water losses — the same equipment and steps described on this page.</p>
     </div>
     <div class="mosaic">
-      <figure><img src="assets/moisture-room.jpg" alt="Flooded living room in Lubbock before water extraction" loading="lazy"><figcaption>Flooded living room, Lubbock</figcaption></figure>
-      <figure><img src="assets/tech-cleanup.webp" alt="Restoration crew extracting water from a flooded Lubbock home" loading="lazy"><figcaption>Extraction crew at work</figcaption></figure>
-      <figure><img src="assets/drying.jpg" alt="Air movers and dehumidifier drying a Lubbock home" loading="lazy"><figcaption>Structural drying setup</figcaption></figure>
-      <figure><img src="assets/flooded-interior.jpg" alt="Flooded kitchen with standing water in Lubbock Texas" loading="lazy"><figcaption>Flooded kitchen</figcaption></figure>
-      <figure><img src="assets/removal.jpg" alt="Air mover drying a contained work area after water damage" loading="lazy"><figcaption>Contained drying</figcaption></figure>
-      <figure><img src="assets/tech-inspect.jpg" alt="Technician checking a wall base for hidden moisture in Lubbock" loading="lazy"><figcaption>Hidden moisture check</figcaption></figure>
+      <figure><picture><source srcset="assets/moisture-room.webp" type="image/webp"><img src="assets/moisture-room.jpg" alt="Flooded living room in Lubbock before water extraction" loading="lazy" width="1200" height="761"></picture><figcaption>Flooded living room, Lubbock</figcaption></figure>
+      <figure><img src="assets/tech-cleanup.webp" alt="Restoration crew extracting water from a flooded Lubbock home" loading="lazy" width="768" height="512"><figcaption>Extraction crew at work</figcaption></figure>
+      <figure><picture><source srcset="assets/drying.webp" type="image/webp"><img src="assets/drying.jpg" alt="Air movers and dehumidifier drying a Lubbock home" loading="lazy" width="1024" height="576"></picture><figcaption>Structural drying setup</figcaption></figure>
+      <figure><picture><source srcset="assets/flooded-interior.webp" type="image/webp"><img src="assets/flooded-interior.jpg" alt="Flooded kitchen with standing water in Lubbock Texas" loading="lazy" width="1200" height="675"></picture><figcaption>Flooded kitchen</figcaption></figure>
+      <figure><picture><source srcset="assets/removal.webp" type="image/webp"><img src="assets/removal.jpg" alt="Air mover drying a contained work area after water damage" loading="lazy" width="640" height="427"></picture><figcaption>Contained drying</figcaption></figure>
+      <figure><picture><source srcset="assets/tech-inspect.webp" type="image/webp"><img src="assets/tech-inspect.jpg" alt="Technician checking a wall base for hidden moisture in Lubbock" loading="lazy" width="1200" height="670"></picture><figcaption>Hidden moisture check</figcaption></figure>
     </div>
   </div>
 </section>
@@ -669,7 +670,7 @@ footer.site a:hover{color:#67D7E0}
       </ul>
     </div>
     <div class="video-frame">
-      <video class="sec-video" muted loop playsinline preload="metadata" poster="assets/drying-wall.jpg" aria-label="Structural drying equipment drying a home after water damage">
+      <video class="sec-video" muted loop playsinline preload="metadata" poster="assets/drying-wall.webp" aria-label="Structural drying equipment drying a home after water damage">
         <source src="assets/video-drying.mp4" type="video/mp4">
       </video>
     </div>
@@ -693,10 +694,10 @@ footer.site a:hover{color:#67D7E0}
       <ul class="map-list" id="mapList"></ul>
     </div>
     <div class="grid grid-4" style="margin-top:26px">
-      <article class="card"><div class="thumb"><img src="assets/lubbock.jpg" alt="Downtown Lubbock Texas skyline at sunset" loading="lazy"></div><div class="body"><h3>Lubbock</h3><p>Home base for all crews — the fastest response times in the area.</p></div></article>
-      <article class="card"><div class="thumb"><img src="assets/worker-cleanup.jpg" alt="Restoration worker in a flooded room in Wolfforth Texas" loading="lazy"></div><div class="body"><h3>Wolfforth</h3><p>Growing subdivisions — extraction and drying for single- and two-story homes.</p><a class="pill-link" href="/areas/wolfforth/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flooded-room.jpg" alt="Standing water in a home in Slaton Texas" loading="lazy"></div><div class="body"><h3>Slaton</h3><p>Older homes and pier-and-beam foundations — crawl space water and slow leaks.</p><a class="pill-link" href="/areas/slaton/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/hero.jpg" alt="Water extraction in progress in Levelland Texas" loading="lazy"></div><div class="body"><h3>Levelland</h3><p>Hockley County coverage for water heaters, appliance leaks and storm flooding.</p><a class="pill-link" href="/areas/levelland/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/lubbock.webp" type="image/webp"><img src="assets/lubbock.jpg" alt="Downtown Lubbock Texas skyline at sunset" loading="lazy" width="768" height="432"></picture></div><div class="body"><h3>Lubbock</h3><p>Home base for all crews — the fastest response times in the area.</p></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/worker-cleanup.webp" type="image/webp"><img src="assets/worker-cleanup.jpg" alt="Restoration worker in a flooded room in Wolfforth Texas" loading="lazy" width="1400" height="785"></picture></div><div class="body"><h3>Wolfforth</h3><p>Growing subdivisions — extraction and drying for single- and two-story homes.</p><a class="pill-link" href="/areas/wolfforth/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flooded-room.webp" type="image/webp"><img src="assets/flooded-room.jpg" alt="Standing water in a home in Slaton Texas" loading="lazy" width="1280" height="720"></picture></div><div class="body"><h3>Slaton</h3><p>Older homes and pier-and-beam foundations — crawl space water and slow leaks.</p><a class="pill-link" href="/areas/slaton/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/hero.webp" type="image/webp"><img src="assets/hero.jpg" alt="Water extraction in progress in Levelland Texas" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><h3>Levelland</h3><p>Hockley County coverage for water heaters, appliance leaks and storm flooding.</p><a class="pill-link" href="/areas/levelland/">Area page →</a></div></article>
     </div>
     <div class="town-chips" aria-label="More communities served">
       <a href="/areas/plainview/">Plainview</a><a href="/areas/idalou/">Idalou</a><a href="/areas/abernathy/">Abernathy</a><a href="/areas/shallowater/">Shallowater</a><a href="/areas/new-deal/">New Deal</a><a href="/areas/ransom-canyon/">Ransom Canyon</a><a href="/areas/buffalo-springs-lake/">Buffalo Springs Lake</a><a href="/areas/reese-center/">Reese Center</a><a href="/areas/posey/">Posey</a><a href="/areas/acuff/">Acuff</a><a href="/areas/roosevelt/">Roosevelt</a><a href="/areas/smyer/">Smyer</a><a href="/areas/lorenzo/">Lorenzo</a><span>Lubbock County</span><span>Hale County</span><span>Hockley County</span><span>Crosby County</span>
@@ -708,7 +709,7 @@ footer.site a:hover{color:#67D7E0}
 <section>
   <div class="wrap video-sec">
     <div class="video-frame">
-      <video class="sec-video" muted loop playsinline preload="metadata" poster="assets/worker-cleanup.jpg" aria-label="A dried and restored living room after water damage repair">
+      <video class="sec-video" muted loop playsinline preload="metadata" poster="assets/worker-cleanup.webp" aria-label="A dried and restored living room after water damage repair">
         <source src="assets/video-restored.mp4" type="video/mp4">
       </video>
     </div>
@@ -754,22 +755,22 @@ footer.site a:hover{color:#67D7E0}
       <p>Lubbock itself is covered by every page above — it is home base. <a href="/areas/lubbock/">View the Lubbock area page →</a> <a href="/areas/lubbock/">View the Lubbock area page →</a> Each surrounding town below has its own page too, because a crawl space in Slaton, a freeze burst in Abernathy and a storm flood in Plainview are three different jobs. Every town named on this site — including New Deal, Buffalo Springs Lake, Reese Center, Posey, Acuff, Roosevelt, Smyer and Lorenzo — now has its own full page below.</p>
     </div>
     <div class="grid grid-4">
-      <article class="card"><div class="thumb"><img src="assets/worker-cleanup.jpg" alt="Water damage restoration work in Wolfforth Texas" loading="lazy"></div><div class="body"><h3>Wolfforth</h3><p>Frisenship-area growth, new subdivisions, big floor plans.</p><a class="pill-link" href="/areas/wolfforth/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flooded-room.jpg" alt="Water damage restoration work in Slaton Texas" loading="lazy"></div><div class="body"><h3>Slaton</h3><p>Older homes, pier-and-beam crawl spaces, slow hidden leaks.</p><a class="pill-link" href="/areas/slaton/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/hero.jpg" alt="Water extraction in Levelland Texas" loading="lazy"></div><div class="body"><h3>Levelland</h3><p>Hockley County town and county-road coverage.</p><a class="pill-link" href="/areas/levelland/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flood-home.jpg" alt="Flood cleanup in Plainview Texas" loading="lazy"></div><div class="body"><h3>Plainview</h3><p>Hale County's largest town — storm runoff and freeze losses.</p><a class="pill-link" href="/areas/plainview/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/tech-cleanup.webp" alt="Restoration crew working in Idalou Texas" loading="lazy"></div><div class="body"><h3>Idalou</h3><p>Small-town homes and farm properties east of Lubbock.</p><a class="pill-link" href="/areas/idalou/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/pipe-repair.jpg" alt="Burst pipe water damage in Abernathy Texas" loading="lazy"></div><div class="body"><h3>Abernathy</h3><p>I-27 corridor freeze bursts and water heater failures.</p><a class="pill-link" href="/areas/abernathy/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/drying.jpg" alt="Structural drying in Shallowater Texas" loading="lazy"></div><div class="body"><h3>Shallowater</h3><p>Northwest growth, slab leaks and storm-driven water.</p><a class="pill-link" href="/areas/shallowater/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/basement.jpg" alt="Lower level water damage in Ransom Canyon Texas" loading="lazy"></div><div class="body"><h3>Ransom Canyon</h3><p>Lake and canyon homes — runoff, retaining walls, lower levels.</p><a class="pill-link" href="/areas/ransom-canyon/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/drying.jpg" alt="Structural drying in New Deal Texas" loading="lazy"></div><div class="body"><h3>New Deal</h3><p>I-27 town north of Lubbock — freeze bursts and water heaters.</p><a class="pill-link" href="/areas/new-deal/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flood-home.jpg" alt="Flood cleanup at Buffalo Springs Lake Texas" loading="lazy"></div><div class="body"><h3>Buffalo Springs Lake</h3><p>Lakeside homes — runoff, lower levels, storm water.</p><a class="pill-link" href="/areas/buffalo-springs-lake/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/tech-cleanup.webp" alt="Restoration crew working in Reese Center Texas" loading="lazy"></div><div class="body"><h3>Reese Center</h3><p>Former base-area community — older buildings, storm leaks.</p><a class="pill-link" href="/areas/reese-center/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/flooded-room.jpg" alt="Standing water in a home in Posey Texas" loading="lazy"></div><div class="body"><h3>Posey</h3><p>Small farming community — wells, septic, slow leaks.</p><a class="pill-link" href="/areas/posey/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/worker-cleanup.jpg" alt="Restoration worker in Acuff Texas" loading="lazy"></div><div class="body"><h3>Acuff</h3><p>Farming community east of Lubbock — rural water losses.</p><a class="pill-link" href="/areas/acuff/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/pipe-repair.jpg" alt="Burst pipe water damage in Roosevelt Texas" loading="lazy"></div><div class="body"><h3>Roosevelt</h3><p>East of Lubbock — freeze bursts, well leaks.</p><a class="pill-link" href="/areas/roosevelt/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/ceiling.jpg" alt="Ceiling drying after a roof leak in Smyer Texas" loading="lazy"></div><div class="body"><h3>Smyer</h3><p>Hockley County town on TX-114 — freeze and storm losses.</p><a class="pill-link" href="/areas/smyer/">Area page →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/basement.jpg" alt="Lower level water damage in Lorenzo Texas" loading="lazy"></div><div class="body"><h3>Lorenzo</h3><p>Crosby County town east of Idalou — older homes, storms.</p><a class="pill-link" href="/areas/lorenzo/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/worker-cleanup.webp" type="image/webp"><img src="assets/worker-cleanup.jpg" alt="Water damage restoration work in Wolfforth Texas" loading="lazy" width="1400" height="785"></picture></div><div class="body"><h3>Wolfforth</h3><p>Frisenship-area growth, new subdivisions, big floor plans.</p><a class="pill-link" href="/areas/wolfforth/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flooded-room.webp" type="image/webp"><img src="assets/flooded-room.jpg" alt="Water damage restoration work in Slaton Texas" loading="lazy" width="1280" height="720"></picture></div><div class="body"><h3>Slaton</h3><p>Older homes, pier-and-beam crawl spaces, slow hidden leaks.</p><a class="pill-link" href="/areas/slaton/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/hero.webp" type="image/webp"><img src="assets/hero.jpg" alt="Water extraction in Levelland Texas" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><h3>Levelland</h3><p>Hockley County town and county-road coverage.</p><a class="pill-link" href="/areas/levelland/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flood-home.webp" type="image/webp"><img src="assets/flood-home.jpg" alt="Flood cleanup in Plainview Texas" loading="lazy" width="1600" height="1244"></picture></div><div class="body"><h3>Plainview</h3><p>Hale County's largest town — storm runoff and freeze losses.</p><a class="pill-link" href="/areas/plainview/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><img src="assets/tech-cleanup.webp" alt="Restoration crew working in Idalou Texas" loading="lazy" width="768" height="512"></div><div class="body"><h3>Idalou</h3><p>Small-town homes and farm properties east of Lubbock.</p><a class="pill-link" href="/areas/idalou/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/pipe-repair.webp" type="image/webp"><img src="assets/pipe-repair.jpg" alt="Burst pipe water damage in Abernathy Texas" loading="lazy" width="1435" height="801"></picture></div><div class="body"><h3>Abernathy</h3><p>I-27 corridor freeze bursts and water heater failures.</p><a class="pill-link" href="/areas/abernathy/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/drying.webp" type="image/webp"><img src="assets/drying.jpg" alt="Structural drying in Shallowater Texas" loading="lazy" width="1024" height="576"></picture></div><div class="body"><h3>Shallowater</h3><p>Northwest growth, slab leaks and storm-driven water.</p><a class="pill-link" href="/areas/shallowater/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/basement.webp" type="image/webp"><img src="assets/basement.jpg" alt="Lower level water damage in Ransom Canyon Texas" loading="lazy" width="1000" height="1000"></picture></div><div class="body"><h3>Ransom Canyon</h3><p>Lake and canyon homes — runoff, retaining walls, lower levels.</p><a class="pill-link" href="/areas/ransom-canyon/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/drying.webp" type="image/webp"><img src="assets/drying.jpg" alt="Structural drying in New Deal Texas" loading="lazy" width="1024" height="576"></picture></div><div class="body"><h3>New Deal</h3><p>I-27 town north of Lubbock — freeze bursts and water heaters.</p><a class="pill-link" href="/areas/new-deal/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flood-home.webp" type="image/webp"><img src="assets/flood-home.jpg" alt="Flood cleanup at Buffalo Springs Lake Texas" loading="lazy" width="1600" height="1244"></picture></div><div class="body"><h3>Buffalo Springs Lake</h3><p>Lakeside homes — runoff, lower levels, storm water.</p><a class="pill-link" href="/areas/buffalo-springs-lake/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><img src="assets/tech-cleanup.webp" alt="Restoration crew working in Reese Center Texas" loading="lazy" width="768" height="512"></div><div class="body"><h3>Reese Center</h3><p>Former base-area community — older buildings, storm leaks.</p><a class="pill-link" href="/areas/reese-center/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/flooded-room.webp" type="image/webp"><img src="assets/flooded-room.jpg" alt="Standing water in a home in Posey Texas" loading="lazy" width="1280" height="720"></picture></div><div class="body"><h3>Posey</h3><p>Small farming community — wells, septic, slow leaks.</p><a class="pill-link" href="/areas/posey/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/worker-cleanup.webp" type="image/webp"><img src="assets/worker-cleanup.jpg" alt="Restoration worker in Acuff Texas" loading="lazy" width="1400" height="785"></picture></div><div class="body"><h3>Acuff</h3><p>Farming community east of Lubbock — rural water losses.</p><a class="pill-link" href="/areas/acuff/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/pipe-repair.webp" type="image/webp"><img src="assets/pipe-repair.jpg" alt="Burst pipe water damage in Roosevelt Texas" loading="lazy" width="1435" height="801"></picture></div><div class="body"><h3>Roosevelt</h3><p>East of Lubbock — freeze bursts, well leaks.</p><a class="pill-link" href="/areas/roosevelt/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/ceiling.webp" type="image/webp"><img src="assets/ceiling.jpg" alt="Ceiling drying after a roof leak in Smyer Texas" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><h3>Smyer</h3><p>Hockley County town on TX-114 — freeze and storm losses.</p><a class="pill-link" href="/areas/smyer/">Area page →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/basement.webp" type="image/webp"><img src="assets/basement.jpg" alt="Lower level water damage in Lorenzo Texas" loading="lazy" width="1000" height="1000"></picture></div><div class="body"><h3>Lorenzo</h3><p>Crosby County town east of Idalou — older homes, storms.</p><a class="pill-link" href="/areas/lorenzo/">Area page →</a></div></article>
     </div>
   </div>
 </section>
@@ -816,10 +817,10 @@ footer.site a:hover{color:#67D7E0}
       <p>Four full guides, written for South Plains homes — what to do in the first hour, why pipes burst here, how drying actually works, and how to get through storm season.</p>
     </div>
     <div class="grid grid-4">
-      <article class="card"><div class="thumb"><img src="assets/moisture-room.jpg" alt="Standing water in a Lubbock home during the first hour of a water loss" loading="lazy"></div><div class="body"><h3>The First 60 Minutes</h3><p>What you do in the first hour after finding standing water decides how much of your home can be saved.</p><a class="pill-link" href="/blog/first-60-minutes/">Read guide →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/pipe-repair.jpg" alt="Floor soaked by a burst pipe during a Lubbock freeze" loading="lazy"></div><div class="body"><h3>Burst Pipes in a Freeze</h3><p>Why South Plains plumbing fails on the coldest nights, and the drying that has to follow.</p><a class="pill-link" href="/blog/burst-pipes-freeze/">Read guide →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/drying-wall.jpg" alt="Dehumidifier and drying equipment used in structural drying" loading="lazy"></div><div class="body"><h3>How Drying Works</h3><p>Air movers, dehumidifiers and moisture meters — the actual mechanics of drying a house.</p><a class="pill-link" href="/blog/how-drying-works/">Read guide →</a></div></article>
-      <article class="card"><div class="thumb"><img src="assets/ceiling.jpg" alt="Ceiling water damage after a West Texas storm in Lubbock" loading="lazy"></div><div class="body"><h3>Storm Season Guide</h3><p>Roof leaks, wind-driven rain and playa flooding — and the cleanup that follows each one.</p><a class="pill-link" href="/blog/storm-season/">Read guide →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/moisture-room.webp" type="image/webp"><img src="assets/moisture-room.jpg" alt="Standing water in a Lubbock home during the first hour of a water loss" loading="lazy" width="1200" height="761"></picture></div><div class="body"><h3>The First 60 Minutes</h3><p>What you do in the first hour after finding standing water decides how much of your home can be saved.</p><a class="pill-link" href="/blog/first-60-minutes/">Read guide →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/pipe-repair.webp" type="image/webp"><img src="assets/pipe-repair.jpg" alt="Floor soaked by a burst pipe during a Lubbock freeze" loading="lazy" width="1435" height="801"></picture></div><div class="body"><h3>Burst Pipes in a Freeze</h3><p>Why South Plains plumbing fails on the coldest nights, and the drying that has to follow.</p><a class="pill-link" href="/blog/burst-pipes-freeze/">Read guide →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/drying-wall.webp" type="image/webp"><img src="assets/drying-wall.jpg" alt="Dehumidifier and drying equipment used in structural drying" loading="lazy" width="1000" height="667"></picture></div><div class="body"><h3>How Drying Works</h3><p>Air movers, dehumidifiers and moisture meters — the actual mechanics of drying a house.</p><a class="pill-link" href="/blog/how-drying-works/">Read guide →</a></div></article>
+      <article class="card"><div class="thumb"><picture><source srcset="assets/ceiling.webp" type="image/webp"><img src="assets/ceiling.jpg" alt="Ceiling water damage after a West Texas storm in Lubbock" loading="lazy" width="1536" height="1024"></picture></div><div class="body"><h3>Storm Season Guide</h3><p>Roof leaks, wind-driven rain and playa flooding — and the cleanup that follows each one.</p><a class="pill-link" href="/blog/storm-season/">Read guide →</a></div></article>
     </div>
   </div>
 </section>
@@ -837,7 +838,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="sec-head">
       <span class="tag">Business Profile &amp; Reviews</span>
-      <div class="sec-img"><img src="assets/worker-cleanup.jpg" alt="Restoration worker cleaning up after water damage in Lubbock" loading="lazy"></div>
+      <div class="sec-img"><picture><source srcset="assets/worker-cleanup.webp" type="image/webp"><img src="assets/worker-cleanup.jpg" alt="Restoration worker cleaning up after water damage in Lubbock" loading="lazy" width="1400" height="785"></picture></div>
       <h2>Find Us, Verify Us, Review Us</h2>
       <p>One exact set of business details, used identically everywhere — on this site, on Google, and on every directory — so you can always verify that the crew you found is the crew you meant to call.</p>
     </div>
@@ -878,7 +879,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="sec-head">
       <span class="tag">FAQ</span>
-      <div class="sec-img"><img src="assets/flooded-interior.jpg" alt="Flooded kitchen with standing water in Lubbock" loading="lazy"></div>
+      <div class="sec-img"><picture><source srcset="assets/flooded-interior.webp" type="image/webp"><img src="assets/flooded-interior.jpg" alt="Flooded kitchen with standing water in Lubbock" loading="lazy" width="1200" height="675"></picture></div>
       <h2>Frequently Asked Questions</h2>
       <p>Straight answers about water damage restoration in Lubbock — the same answers dispatch gives on the phone.</p>
     </div>
@@ -913,7 +914,7 @@ footer.site a:hover{color:#67D7E0}
 <section>
   <div class="wrap">
     <div class="final-cta">
-      <img class="bgimg" src="assets/lubbock.jpg" alt="Lubbock Texas skyline at sunset" loading="lazy">
+      <picture><source srcset="assets/lubbock.webp" type="image/webp"><img class="bgimg" src="assets/lubbock.jpg" alt="Lubbock Texas skyline at sunset" loading="lazy" width="768" height="432"></picture>
       <div class="shade2"></div>
       <div class="in">
         <h2>Water in Your Lubbock Home Right Now?</h2>
@@ -932,7 +933,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="cols">
       <div>
-        <img class="footer-logo" src="assets/logo-oneline-white.png" alt="Water Damage Lubbock logo">
+        <picture><source srcset="assets/logo-oneline-white.webp" type="image/webp"><img class="footer-logo" src="assets/logo-oneline-white.png" alt="Water Damage Lubbock logo" width="600" height="183"></picture>
         <p>24/7 water damage restoration for Lubbock and the South Plains: emergency water removal, structural drying, flood and sewage cleanup.</p>
         <p><a href="tel:+18062179635" style="display:inline;font-weight:900;color:#fff">CALL NOW: (806) 217-9635</a></p>
       </div>
