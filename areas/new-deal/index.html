@@ -27,7 +27,16 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.waterdamagelubbock.com/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<style>
+/* Metric-matched fallback faces (PageSpeed round 2, 6 Nov 2026): while Inter/Poppins load,
+   local Arial/Roboto render with the webfonts' own ascent/descent/line-gap, so text does not
+   shift when the webfonts swap in. Values measured from the served woff2 files (fontTools). */
+@font-face{font-family:"Inter Fallback";src:local("Arial"),local("Helvetica Neue"),local("Segoe UI"),local("Roboto");font-weight:100 900;ascent-override:96.88%;descent-override:24.12%;line-gap-override:0%;size-adjust:103.33%}
+@font-face{font-family:"Poppins Fallback";src:local("Arial"),local("Helvetica Neue"),local("Segoe UI"),local("Roboto");font-weight:100 900;ascent-override:105%;descent-override:35%;line-gap-override:10%;size-adjust:104.86%}
+</style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 /* ============ TWO-COLOR DESIGN SYSTEM: NAVY + AQUA ============ */
@@ -47,9 +56,9 @@ html[data-theme="light"]{
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.65;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter","Inter Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.65;overflow-x:hidden}
 img,video{max-width:100%}
-h1,h2,h3,h4{font-family:"Poppins","Inter",system-ui,sans-serif;font-weight:600;line-height:1.2;margin:0 0 .45em;letter-spacing:0}
+h1,h2,h3,h4{font-family:"Poppins","Poppins Fallback","Inter","Inter Fallback",system-ui,sans-serif;font-weight:600;line-height:1.2;margin:0 0 .45em;letter-spacing:0}
 h2{font-size:clamp(28px,3.8vw,40px)}
 h3{font-size:clamp(19px,2.4vw,24px)}
 p{margin:0 0 1em}
@@ -146,7 +155,7 @@ nav.main{display:none!important}
 /* Stats */
 .stats{background:var(--navy);color:#FFFFFF}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:26px;padding-bottom:26px}
-.stat b{display:block;font-family:"Poppins","Inter",sans-serif;font-weight:600;font-size:30px;line-height:1;color:#67D7E0}
+.stat b{display:block;font-family:"Poppins","Poppins Fallback","Inter","Inter Fallback",sans-serif;font-weight:600;font-size:30px;line-height:1;color:#67D7E0}
 .stat span{font-weight:400;font-size:15px;color:#D6EAF2}
 /* Steps / textback */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
@@ -204,8 +213,8 @@ nav.main{display:none!important}
 .map-pin-home{width:38px;height:38px;border-radius:50%;background:#12304A;color:#FFFFFF;font-weight:600;display:flex;align-items:center;justify-content:center;font-size:19px;border:3px solid var(--aqua);box-shadow:0 2px 12px rgba(0,0,0,.5)}
 .map-pin-sel{transform:scale(1.18)}
 .leaflet-popup-content-wrapper{background:var(--panel);color:var(--text);border:1px solid var(--aqua);border-radius:14px;box-shadow:var(--shadow)}
-.leaflet-popup-content{font-family:"Inter",system-ui,sans-serif;font-size:15.5px;line-height:1.5;margin:14px 18px}
-.leaflet-popup-content b{font-family:"Poppins","Inter",sans-serif;font-weight:600;font-size:19px}
+.leaflet-popup-content{font-family:"Inter","Inter Fallback",system-ui,sans-serif;font-size:15.5px;line-height:1.5;margin:14px 18px}
+.leaflet-popup-content b{font-family:"Poppins","Poppins Fallback","Inter","Inter Fallback",sans-serif;font-weight:600;font-size:19px}
 .leaflet-popup-content a{color:var(--aqua-soft);font-weight:800}
 .leaflet-popup-tip{background:var(--panel);border:1px solid var(--aqua);box-shadow:none}
 .leaflet-control-attribution{background:rgba(255,255,255,.88)!important;color:#06233F!important;font-size:11px}
@@ -238,9 +247,9 @@ nav.main{display:none!important}
 /* Index rows */
 .index-row{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px 14px 14px;text-decoration:none;color:var(--text);box-shadow:var(--shadow)}
 .index-row img{width:96px;height:68px;object-fit:cover;border-radius:10px;flex:none}
-.index-row b{font-family:"Poppins","Inter",sans-serif;font-weight:600;font-size:20px;overflow-wrap:anywhere}
+.index-row b{font-family:"Poppins","Poppins Fallback","Inter","Inter Fallback",sans-serif;font-weight:600;font-size:20px;overflow-wrap:anywhere}
 .index-row>span{min-width:0}
-.index-row small{display:block;color:var(--muted);font-family:"Inter",sans-serif}
+.index-row small{display:block;color:var(--muted);font-family:"Inter","Inter Fallback",sans-serif}
 .index-row .arrow{margin-left:auto;flex:none;width:38px;height:38px;border-radius:50%;background:var(--aqua);color:#03263F;display:flex;align-items:center;justify-content:center;font-weight:900}
 .index-list{display:grid;gap:12px}
 /* Reviews / NAP */
@@ -273,7 +282,7 @@ nav.main{display:none!important}
 footer.site{background:#0E2438;color:#C7D9E6;padding:60px 0 110px;margin-top:0}
 html[data-theme="light"] footer.site{background:#0E2438}
 footer.site .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
-footer.site h4{color:#fff;font-size:19px;font-family:"Poppins","Inter",sans-serif}
+footer.site h4{color:#fff;font-size:19px;font-family:"Poppins","Poppins Fallback","Inter","Inter Fallback",sans-serif}
 footer.site a{color:#C7D9E6;text-decoration:none;display:block;padding:4px 0;font-size:15.5px}
 footer.site a:hover{color:#67D7E0}
 .footer-logo{height:52px;width:auto;margin-bottom:14px;background:none;border:0;box-shadow:none;display:block}
