@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=optional" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=optional"></noscript>
 <style>
 /* Metric-matched fallback faces (PageSpeed round 2, 6 Nov 2026): while Inter/Poppins load,
    local Arial/Roboto render with the webfonts' own ascent/descent/line-gap, so text does not
@@ -37,7 +37,7 @@
 @font-face{font-family:"Inter Fallback";src:local("Arial"),local("Helvetica Neue"),local("Segoe UI"),local("Roboto");font-weight:100 900;ascent-override:96.88%;descent-override:24.12%;line-gap-override:0%;size-adjust:103.33%}
 @font-face{font-family:"Poppins Fallback";src:local("Arial"),local("Helvetica Neue"),local("Segoe UI"),local("Roboto");font-weight:100 900;ascent-override:105%;descent-override:35%;line-gap-override:10%;size-adjust:104.86%}
 </style>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preload" as="style" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></noscript>
 <style>
 /* ============ TWO-COLOR DESIGN SYSTEM: NAVY + AQUA ============ */
 :root{
@@ -92,7 +92,7 @@ section{padding:74px 0}
 header.site{position:sticky;top:0;z-index:60;background:#FFFFFF;border-bottom:3px solid #20B8C5;box-shadow:0 4px 18px rgba(18,48,74,.14)}
 .header-in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 20px;max-width:1220px;margin:0 auto}
 .logo-clean{display:block;background:none;border:0;padding:0;box-shadow:none;line-height:0}
-.logo-clean img{height:46px;width:auto;background:none;border:0;box-shadow:none}
+.logo-clean img{height:46px;width:auto;aspect-ratio:600/183;background:none;border:0;box-shadow:none}
 /* White header in BOTH themes: always the DARK-text logo (assets/logo-oneline.png).
    The white logo variant must NEVER sit on this white header — it would disappear. */
 .logo-for-dark{display:none!important}
@@ -467,7 +467,7 @@ footer.site a:hover{color:#67D7E0}
 <header class="site">
   <div class="header-in">
     <a class="logo-clean" href="/" aria-label="Water Damage Lubbock — home">
-      <picture><source srcset="../../assets/logo-oneline.webp" type="image/webp"><img class="logo-for-light" src="../../assets/logo-oneline.png" alt="Water Damage Lubbock logo" width="600" height="183"></picture>
+      <picture><source srcset="../../assets/logo-oneline-300.webp" type="image/webp"><img class="logo-for-light" src="../../assets/logo-oneline-300.png" alt="Water Damage Lubbock logo" width="300" height="92"></picture>
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="/#services">Services</a>
@@ -520,7 +520,7 @@ footer.site a:hover{color:#67D7E0}
     </div>
     <div class="page-cta"><a class="call-btn" href="tel:+18062179635">CALL NOW: <span class="call-num">(806) 217-9635</span></a></div>
   
-    <div class="banner"><picture><source srcset="../../assets/flood-home.webp" type="image/webp"><img src="../../assets/flood-home.jpg" alt="Water damage restoration work in Tahoka, TX" loading="lazy" width="1600" height="1244"></picture></div>
+    <div class="banner"><picture><source srcset="../../assets/flood-home-800.webp 800w, ../../assets/flood-home.webp 1200w" sizes="(max-width:720px) 740px, 1100px" type="image/webp"><img src="../../assets/flood-home.jpg" alt="Water damage restoration work in Tahoka, TX" loading="lazy" width="1600" height="1244"></picture></div>
     <div class="wrap"><h2>Services in Tahoka, TX</h2><p><a href="/services/water-removal/">Emergency Water Removal & Extraction</a> &nbsp;·&nbsp; <a href="/services/structural-drying/">Structural Drying & Dehumidification</a> &nbsp;·&nbsp; <a href="/services/flood-cleanup/">Flood Damage Cleanup</a> &nbsp;·&nbsp; <a href="/services/sewage-cleanup/">Sewage Backup Cleanup</a> &nbsp;·&nbsp; <a href="/services/burst-pipe/">Burst Pipe Water Cleanup</a> &nbsp;·&nbsp; <a href="/services/roof-leak/">Roof Leak & Storm Water Damage</a> &nbsp;·&nbsp; <a href="/services/basement/">Basement & Crawl Space Water Damage</a> &nbsp;·&nbsp; <a href="/services/emergency/">24/7 Emergency Water Damage Service</a></p>
     <p>Call <a href="tel:+18062179635">(806) 217-9635</a> — 24/7 emergency service in Tahoka and across Lubbock and the South Plains. <a href="/">Back to homepage</a> &nbsp;|&nbsp; <a href="/#areas">Service area map</a></p></div>
     </div>
@@ -533,7 +533,7 @@ footer.site a:hover{color:#67D7E0}
   <div class="wrap">
     <div class="cols">
       <div>
-        <picture><source srcset="../../assets/logo-oneline-white.webp" type="image/webp"><img class="footer-logo" src="../../assets/logo-oneline-white.png" alt="Water Damage Lubbock logo" width="600" height="183"></picture>
+        <picture><source srcset="../../assets/logo-oneline-white-300.webp" type="image/webp"><img class="footer-logo" src="../../assets/logo-oneline-white-300.png" alt="Water Damage Lubbock logo" width="300" height="92"></picture>
         <p>24/7 water damage restoration for Lubbock and the South Plains: emergency water removal, structural drying, flood and sewage cleanup.</p>
         <p><a href="tel:+18062179635" style="display:inline;font-weight:900;color:#fff">CALL NOW: (806) 217-9635</a></p>
       </div>
